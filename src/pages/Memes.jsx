@@ -62,8 +62,11 @@ const Memes = () => {
         // 3. Sorting
         result.sort((a, b) => {
             if (sortBy === 'name') return a.name.localeCompare(b.name);
+            if (sortBy === 'name_desc') return b.name.localeCompare(a.name);
             if (sortBy === 'rating') return b.rating - a.rating;
+            if (sortBy === 'rating_asc') return a.rating - b.rating;
             if (sortBy === 'size') return (b.width * b.height) - (a.width * a.height);
+            if (sortBy === 'size_asc') return (a.width * a.height) - (b.width * b.height);
             return 0;
         });
 
@@ -106,8 +109,11 @@ const Memes = () => {
                         onChange={(e) => setSortBy(e.target.value)}
                     >
                         <option value="name">Name (A-Z)</option>
+                        <option value="name_desc">Name (Z-A)</option>
                         <option value="rating">Rating (High to Low)</option>
+                        <option value="rating_asc">Rating (Low to High)</option>
                         <option value="size">Size (Large to Small)</option>
+                        <option value="size_asc">Size (Small to Large)</option>
                     </select>
                 </div>
             </div>
