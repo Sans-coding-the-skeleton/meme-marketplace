@@ -74,7 +74,7 @@ const Dashboard = () => {
       </div>
 
       {/* Meme of the Day Section */}
-      <div className="bg-gradient-to-r from-purple-500 to-indigo-600 rounded-xl p-8 text-white shadow-lg">
+      <div className="bg-indigo-600 rounded-xl p-8 text-white shadow-lg">
         <h2 className="text-2xl font-bold mb-4">Meme of the Day (Most Popular)</h2>
         {loading ? (
           <div className="animate-pulse h-64 bg-white/20 rounded-lg"></div>
