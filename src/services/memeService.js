@@ -8,7 +8,7 @@
 
 const MEME_API_URL = 'https://api.imgflip.com/get_memes';
 
-const CATEGORIES = ["animals", "celebrities", "gaming", "school", "random"];
+export const CATEGORIES = ["animals", "celebrities", "gaming", "school", "random"];
 
 /**
  * fetchMemes
@@ -29,16 +29,25 @@ export const fetchMemes = async () => {
 
         // Transform data:
         // The raw API only gives us ID, name, and URL.
-        // We simulate a richer dataset by generating random stats.
+        // We simulate a richer dataset by generating deterministically based on ID.
         const memes = data.data.memes.map(meme => {
-            const randomRating = Math.floor(Math.random() * 5) + 1;
-            const randomCategory = CATEGORIES[Math.floor(Math.random() * CATEGORIES.length)];
-            const price = randomRating * 25; // Price logic based on rating
+            // Simple hash from ID string
+            let hash = 0;
+            for (let i = 0; i < meme.id.length; i++) {
+                hash = ((hash << 5) - hash) + meme.id.charCodeAt(i);
+                hash |= 0; // Convert to 32bit integer
+            }
+            // Ensure positive
+            hash = Math.abs(hash);
+
+            const rating = (hash % 5) + 1;
+            const category = CATEGORIES[hash % CATEGORIES.length];
+            const price = rating * 25; // Price logic based on rating
 
             return {
                 ...meme,
-                rating: randomRating,
-                category: randomCategory,
+                rating: rating,
+                category: category,
                 price: price
             };
         });

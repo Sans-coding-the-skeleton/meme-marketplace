@@ -16,22 +16,22 @@ const MemeCard = ({ meme }) => {
     const { addItem } = useCart();
 
     return (
-        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col h-full">
-            {/* Image Container with Hover Effects */}
+        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden flex flex-col h-full">
+            {/* Image Container */}
             <div className="relative aspect-square overflow-hidden group">
                 <img
                     src={meme.url}
                     alt={meme.name}
-                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                    className="w-full h-full object-cover"
                     loading="lazy"
                 />
 
                 {/* Overlay: Visible on Hover */}
-                <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
-                    <Link to={`/memes/${meme.id}`} className="p-3 bg-white text-gray-900 rounded-full hover:bg-gray-100 transition-colors" title="View Details">
+                <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 flex items-center justify-center gap-4">
+                    <Link to={`/memes/${meme.id}`} className="p-3 bg-white text-gray-900 rounded-full hover:bg-gray-100" title="View Details">
                         <Eye className="h-6 w-6" />
                     </Link>
-                    <button onClick={() => addItem(meme)} className="p-3 bg-indigo-600 text-white rounded-full hover:bg-indigo-700 transition-colors" title="Add to Cart">
+                    <button onClick={() => addItem(meme)} className="p-3 bg-indigo-600 text-white rounded-full hover:bg-indigo-700" title="Add to Cart">
                         <ShoppingCart className="h-6 w-6" />
                     </button>
                 </div>

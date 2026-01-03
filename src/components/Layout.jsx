@@ -48,7 +48,7 @@ const Layout = () => {
     };
 
     return (
-        <div className="flex flex-col min-h-screen transition-colors duration-200 bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+        <div className="flex flex-col min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
             {/* --- Navigation Bar --- */}
             <nav className="border-b bg-white/80 dark:bg-gray-800/80 backdrop-blur-md sticky top-0 z-50">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -101,15 +101,6 @@ const Layout = () => {
                 {/* Outlet renders the child route's element */}
                 <Outlet />
             </main>
-
-            {/* --- Footer --- */}
-            <footer className="bg-white dark:bg-gray-800 border-t mt-auto">
-                <div className="max-w-7xl mx-auto py-6 px-4 overflow-hidden sm:px-6 lg:px-8">
-                    <p className="textAlign-center text-center text-base text-gray-500">
-                        &copy; 2026 Meme Marketplace Pro. All rights reserved.
-                    </p>
-                </div>
-            </footer>
         </div>
     );
 };

@@ -49,25 +49,25 @@ const Dashboard = () => {
       {/* Stats Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         {/* Total Memes Card */}
-        <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md transition-transform hover:scale-105">
+        <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
           <h3 className="text-gray-500 dark:text-gray-400 text-sm font-medium">Total Memes</h3>
           <p className="text-3xl font-bold">{loading ? "..." : memes.length}</p>
         </div>
 
         {/* Categories Card */}
-        <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md transition-transform hover:scale-105">
+        <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
           <h3 className="text-gray-500 dark:text-gray-400 text-sm font-medium">Categories</h3>
           <p className="text-3xl font-bold">{loading ? "..." : totalCategories}</p>
         </div>
 
         {/* Cart Items Card */}
-        <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md transition-transform hover:scale-105">
+        <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
           <h3 className="text-gray-500 dark:text-gray-400 text-sm font-medium">Items in Cart</h3>
           <p className="text-3xl font-bold">{getTotalItems()}</p>
         </div>
 
         {/* Cart Value Card */}
-        <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md transition-transform hover:scale-105">
+        <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
           <h3 className="text-gray-500 dark:text-gray-400 text-sm font-medium">Total Value</h3>
           <p className="text-3xl font-bold">${getTotalPrice()}</p>
         </div>

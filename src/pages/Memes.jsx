@@ -10,11 +10,11 @@
  * - Loading Skeletons
  */
 import React, { useState, useEffect, useMemo } from 'react';
-import { fetchMemes } from '../services/memeService';
+import { fetchMemes, CATEGORIES as SERVICE_CATEGORIES } from '../services/memeService';
 import MemeCard from '../components/MemeCard';
 import { Search, Filter } from 'lucide-react';
 
-const CATEGORIES = ["All", "animals", "celebrities", "gaming", "school", "random"];
+const CATEGORIES = ["All", ...SERVICE_CATEGORIES];
 
 const Memes = () => {
     const [memes, setMemes] = useState([]);
