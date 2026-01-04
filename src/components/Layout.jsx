@@ -55,8 +55,8 @@ const Layout = () => {
                     <div className="flex items-center justify-between h-16">
                         {/* Logo and Mobile Menu Button (implied) */}
                         <div className="flex items-center">
-                            <Link to="/dashboard" className="text-2xl font-bold text-indigo-600 dark:text-indigo-400">
-                                MemeMarketPro
+                            <Link to="/dashboard" className="text-2xl font-bold text-green-600 dark:text-green-400">
+                                Meme Marketplace
                             </Link>
                             <div className="hidden md:block">
                                 <div className="ml-10 flex items-baseline space-x-4">

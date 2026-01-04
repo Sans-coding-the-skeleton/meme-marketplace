@@ -18,7 +18,7 @@ const Cart = () => {
             <div className="text-center py-20">
                 <h2 className="text-3xl font-bold mb-4">Your Cart is Empty</h2>
                 <p className="text-gray-500 dark:text-gray-400 mb-8">Looks like you haven't added any memes yet.</p>
-                <Link to="/memes" className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700">
+                <Link to="/memes" className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-700">
                     Browse Memes <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
             </div>
@@ -56,7 +56,7 @@ const Cart = () => {
 
                             {/* Price Calculation (Unit * Qty) */}
                             <div className="text-right min-w-[80px]">
-                                <p className="font-bold text-indigo-600 dark:text-indigo-400">${item.price * item.quantity}</p>
+                                <p className="font-bold text-green-600 dark:text-green-400">${item.price * item.quantity}</p>
                                 <p className="text-xs text-gray-500">${item.price} / each</p>
                             </div>
 

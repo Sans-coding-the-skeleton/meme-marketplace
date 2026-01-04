@@ -67,14 +67,14 @@ const MemeDetail = () => {
     if (error) return (
         <div className="text-center py-20">
             <h2 className="text-2xl font-bold text-red-500">{error}</h2>
-            <button onClick={() => navigate('/memes')} className="mt-4 text-indigo-600 hover:text-indigo-800">Back to Memes</button>
+            <button onClick={() => navigate('/memes')} className="mt-4 text-green-600 hover:text-green-800">Back to Memes</button>
         </div>
     );
 
     return (
         <div className="space-y-12">
             {/* Back Button */}
-            <button onClick={() => navigate(-1)} className="flex items-center text-gray-600 dark:text-gray-400 hover:text-indigo-600 transition-colors">
+            <button onClick={() => navigate(-1)} className="flex items-center text-gray-600 dark:text-gray-400 hover:text-green-600 transition-colors">
                 <ArrowLeft className="mr-2 h-5 w-5" /> Back
             </button>
 
@@ -89,7 +89,7 @@ const MemeDetail = () => {
                 <div className="space-y-6">
                     <div className="space-y-2">
                         <div className="flex items-center justify-between">
-                            <span className="px-3 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-800 dark:text-indigo-200 rounded-full text-sm font-semibold uppercase tracking-wide">
+                            <span className="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-sm font-semibold uppercase tracking-wide">
                                 {meme.category}
                             </span>
                             <span className="text-yellow-400 text-xl">{"⭐".repeat(meme.rating)}</span>
@@ -101,7 +101,7 @@ const MemeDetail = () => {
                     {/* Price Display */}
                     <div className="border-t border-b border-gray-200 dark:border-gray-700 py-6">
                         <div className="flex items-end justify-between">
-                            <span className="text-4xl font-bold text-indigo-600 dark:text-indigo-400">${meme.price}</span>
+                            <span className="text-4xl font-bold text-green-600 dark:text-green-400">${meme.price}</span>
                         </div>
                     </div>
 
@@ -109,7 +109,7 @@ const MemeDetail = () => {
                     <div className="space-y-4">
                         <button
                             onClick={() => addItem(meme)}
-                            className="w-full flex items-center justify-center px-8 py-4 border border-transparent text-lg font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-xl md:px-10 transition-colors shadow-lg"
+                            className="w-full flex items-center justify-center px-8 py-4 border border-transparent text-lg font-medium rounded-md text-white bg-green-600 hover:bg-green-700 md:py-4 md:text-xl md:px-10 transition-colors shadow-lg"
                         >
                             <ShoppingCart className="mr-2 h-6 w-6" /> Add to Cart
                         </button>

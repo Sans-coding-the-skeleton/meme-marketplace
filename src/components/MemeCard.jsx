@@ -31,7 +31,7 @@ const MemeCard = ({ meme }) => {
                     <Link to={`/memes/${meme.id}`} className="p-3 bg-white text-gray-900 rounded-full hover:bg-gray-100" title="View Details">
                         <Eye className="h-6 w-6" />
                     </Link>
-                    <button onClick={() => addItem(meme)} className="p-3 bg-indigo-600 text-white rounded-full hover:bg-indigo-700" title="Add to Cart">
+                    <button onClick={() => addItem(meme)} className="p-3 bg-green-600 text-white rounded-full hover:bg-green-700" title="Add to Cart">
                         <ShoppingCart className="h-6 w-6" />
                     </button>
                 </div>
@@ -49,10 +49,10 @@ const MemeCard = ({ meme }) => {
                 <h3 className="text-lg font-bold mb-2 line-clamp-2">{meme.name}</h3>
 
                 <div className="mt-auto flex justify-between items-center">
-                    <span className="text-xl font-bold text-indigo-600 dark:text-indigo-400">${meme.price}</span>
+                    <span className="text-xl font-bold text-green-600 dark:text-green-400">${meme.price}</span>
                     <button
                         onClick={() => addItem(meme)}
-                        className="text-sm font-medium text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300"
+                        className="text-sm font-medium text-green-600 dark:text-green-400 hover:text-green-800 dark:hover:text-green-300"
                     >
                         Add to Cart
                     </button>

@@ -88,7 +88,7 @@ const Dashboard = () => {
       {/* Meme of the Day Section */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Meme of the Day Section */}
-        <div className="bg-indigo-600 rounded-xl p-8 text-white shadow-lg">
+        <div className="bg-green-600 rounded-xl p-8 text-white shadow-lg">
           <h2 className="text-2xl font-bold mb-4">Meme of the Day</h2>
           {loading ? (
             <div className="animate-pulse h-64 bg-white/20 rounded-lg"></div>
@@ -97,8 +97,8 @@ const Dashboard = () => {
               <img src={memeOfTheDay.url} alt={memeOfTheDay.name} className="w-full h-64 object-cover rounded-lg shadow-2xl" />
               <div>
                 <h3 className="text-xl font-bold line-clamp-1">{memeOfTheDay.name}</h3>
-                <p className="mt-2 text-indigo-200">Category: {memeOfTheDay.category}</p>
-                <Link to={`/memes/${memeOfTheDay.id}`} className="mt-4 inline-block bg-white text-indigo-600 px-6 py-2 rounded-full font-bold hover:bg-gray-100 transition-colors">
+                <p className="mt-2 text-green-200">Category: {memeOfTheDay.category}</p>
+                <Link to={`/memes/${memeOfTheDay.id}`} className="mt-4 inline-block bg-white text-green-600 px-6 py-2 rounded-full font-bold hover:bg-gray-100 transition-colors">
                   View Details
                 </Link>
               </div>
@@ -127,7 +127,7 @@ const Dashboard = () => {
                   <span className="text-yellow-500">{"⭐".repeat(mostPopular.rating)}</span>
                 </div>
                 <p className="mt-1 text-gray-500 dark:text-gray-400">Category: {mostPopular.category}</p>
-                <Link to={`/memes/${mostPopular.id}`} className="mt-4 inline-block w-full text-center bg-indigo-600 text-white px-6 py-2 rounded-full font-bold hover:bg-indigo-700 transition-colors">
+                <Link to={`/memes/${mostPopular.id}`} className="mt-4 inline-block w-full text-center bg-green-600 text-white px-6 py-2 rounded-full font-bold hover:bg-green-700 transition-colors">
                   Check it Out
                 </Link>
               </div>
